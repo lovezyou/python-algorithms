@@ -17,12 +17,14 @@ def caesar(words, key):
                 elif val == 0 : val = 26
                 cipher.append(uppercase[val])
         
-            else :
+            elif letr in lowercase :
                 val = int(lowercase.index(letr))+key
                 if val > 26: val = val - 26
                 elif val < 0: val = 26 + val
                 elif val == 0: val = 26
                 cipher.append(lowercase[val])
+            else :
+                cipher.append(letr)
         cipher_word.append("".join(cipher))
         cipher = []
     
